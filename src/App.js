@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MainMenu from "./mainMenu/MainMenu";
+import MainHistory from "./History/MainHistory";
+
+import Transfer from "./Transfer/mainTransfer";
+import Withdraw from "./Withdraw/Withdraw";
+import TopUp from "./TopUp/TopUp";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+  const styles = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "100vh",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles}>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<MainMenu />} />
+          <Route path="transfer" element={<Transfer />} />
+          <Route path="withdraw" element={<Withdraw />} />
+          <Route path="topup" element={<TopUp />} />
+          <Route path="history" element={<MainHistory />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
