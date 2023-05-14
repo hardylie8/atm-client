@@ -1,4 +1,4 @@
-import SideBar from "./../mainMenu/SideBar";
+import SideBar from "../MainMenu/SideBar";
 import HistoryCard from "./HistoryCard";
 import { Box, Grid, Typography } from "@mui/material";
 function MainHistory() {

@@ -1,6 +1,6 @@
 import "./App.css";
-import MainMenu from "./Component/mainMenu/MainMenu";
 import MainHistory from "./Component/History/MainHistory";
+import MainMenu from "./Component/MainMenu/MainMenu";
 
 import Transfer from "./Component/Transfer/mainTransfer";
 import Withdraw from "./Component/Withdraw/Withdraw";

@@ -1,4 +1,4 @@
-import SideBar from "./../mainMenu/SideBar";
+import SideBar from "../MainMenu/SideBar";
 import { Box, Grid, TextField, Button, Typography } from "@mui/material";
 function MainTransfer() {
   return (
