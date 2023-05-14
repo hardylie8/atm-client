@@ -1,10 +1,10 @@
 import "./App.css";
-import MainMenu from "./mainMenu/MainMenu";
-import MainHistory from "./History/MainHistory";
+import MainMenu from "./Component/mainMenu/MainMenu";
+import MainHistory from "./Component/History/MainHistory";
 
-import Transfer from "./Transfer/mainTransfer";
-import Withdraw from "./Withdraw/Withdraw";
-import TopUp from "./TopUp/TopUp";
+import Transfer from "./Component/Transfer/mainTransfer";
+import Withdraw from "./Component/Withdraw/Withdraw";
+import TopUp from "./Component/TopUp/TopUp";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
