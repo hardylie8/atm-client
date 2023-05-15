@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Card, CardContent, Typography, Grid } from "@mui/material";
 import { NumericFormat } from "react-number-format";
-
+import SimpleDateTime from "react-simple-timestamp-to-date";
 export default function BasicCard(props) {
-  const description = props.description;
+  // const description = props.description;
   const type = props.type;
   const date = props.date;
   const value = props.value;
@@ -14,10 +14,16 @@ export default function BasicCard(props) {
         <Grid container spacing={2}>
           <Grid item xs={8}>
             <Typography gutterBottom variant="h5" component="div">
-              {description}
+              {type}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {type} | {date}
+              <SimpleDateTime
+                dateSeparator="-"
+                timeSeparator=":"
+                dateFormat="DMY"
+              >
+                {date}
+              </SimpleDateTime>
             </Typography>
           </Grid>
           <Grid

@@ -1,8 +1,10 @@
 import MainMenuBox from "./MainMenuBox";
 import SideBar from "./SideBar";
-
+import { signOut } from "../../store/slices/authThunk";
 import { Box, Grid } from "@mui/material";
+import { useDispatch } from "react-redux";
 function MainMenu() {
+  const dispatch = useDispatch();
   return (
     <Box sx={{ flexGrow: 1, justifyContent: "center", mt: 3 }}>
       <Grid container>
@@ -12,19 +14,19 @@ function MainMenu() {
         <Grid item xs={9}>
           <Grid container spacing={2}>
             <Grid item xs={4}>
-              <MainMenuBox title="Tarik Uang" linkTo="withdraw" />
+              <MainMenuBox title="Tarik Uang" linkTo="/withdraw" />
             </Grid>
             <Grid item xs={4}>
-              <MainMenuBox title="Transfer" linkTo="transfer" />
+              <MainMenuBox title="Transfer" linkTo="/transfer" />
             </Grid>
             <Grid item xs={4}>
-              <MainMenuBox title="Cek Mutasi" linkTo="history" />
+              <MainMenuBox title="Cek Mutasi" linkTo="/history" />
             </Grid>
             <Grid item xs={4}>
-              <MainMenuBox title="Tambah Saldo" linkTo="topup" />
+              <MainMenuBox title="Update Saldo" linkTo="/topup" />
             </Grid>
             <Grid item xs={4}>
-              <MainMenuBox title="Keluar" />
+              <MainMenuBox title="Keluar" onClick={() => dispatch(signOut())} />
             </Grid>
           </Grid>
         </Grid>
